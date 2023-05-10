@@ -1,0 +1,10 @@
+.contactContainer {    
+    margin: 5em;
+    background-color: var(--beige);
+    border-radius: 3em;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,5 +1,9 @@
 :root {
-  
+  --green: #CCD5AE;
+  --greenish: #E9EDC9;
+  --whiteish: #FEFAE0;
+  --beige: #FAEDCD;
+  --brown: #D4A373;
 }
 
 .light {
@@ -8,4 +12,9 @@
 
 .dark {
   
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }

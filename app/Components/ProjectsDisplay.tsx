@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './ProjectsDisplay.module.css'
+import Image from 'next/image'
 
 interface ProjectType {
     title: string,
@@ -28,11 +29,11 @@ const Projects: ProjectType[] = [
 
 const ProjectsDisplay = () => {
   return (
-    <div>
+    <div className={styles.projectContainer}>
         <h1>Projects</h1>
         <div className={styles.projectsGallery}>
             {
-                Projects.map((project) => (<ProjectCard project={ project } />))
+                Projects.map((project, index) => (<ProjectCard key={index} project={ project } />))
             }
         </div>
     </div>
@@ -42,16 +43,22 @@ const ProjectsDisplay = () => {
 const ProjectCard = ({ project }: {project: ProjectType}) => {
     return (
         <div className={ styles.projectCard } onClick={ () => { window.open(project.link, '_blank') } }>
-            <h1>{ project.title }</h1>
-            <p>{ project.description }</p>
-            <img src={ project.image } alt={ project.title } />
-            
-            <div className={styles.cardTags}>
-                { project.tags.map((tag) => {
-                    return (
-                        <span>{ tag }</span>
-                    )
-                }) }
+            {/* project.image*/ }
+            <div className={styles.projectImage}>
+                <Image src='/demoPic.jpg' width={981} height={1313} alt={ project.title } />
+            </div>
+
+            <div className={ styles.projectContent }>
+                <h1>{ project.title }</h1>
+                <p>{ project.description }</p>
+                
+                <div className={styles.cardTags}>
+                    { project.tags.map((tag) => {
+                        return (
+                            <span>{ tag }</span>
+                        )
+                    }) }
+                </div>
             </div>
         </div>
     )

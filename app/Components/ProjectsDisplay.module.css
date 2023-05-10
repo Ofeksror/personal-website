@@ -1,0 +1,69 @@
+.projectContainer {
+    margin: 5em 5em;
+}
+
+.projectsGallery {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projectCard {
+    background-color: var(--greenish);
+    border-radius: 1em;
+    max-width: 40em;
+    padding: 2em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projectImage {
+    display: block;
+    height: 15em;
+    max-height: 17em;
+    transition: 0.3s ease-in-out;
+}
+
+.projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1em;
+}
+
+.projectContent {
+    z-index: 1;
+    margin-top: -1.5em;
+    padding: 0 1.5em;
+    transition: 0.3s ease-in-out;
+}
+
+.projectContent h1 {
+    color: var(--greenish);
+}
+
+.projectContent p {
+    margin: 0.5em 0;
+}
+
+/* Hover effect for card */
+
+.projectCard:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover .projectImage {
+    height: 17em;
+    transition: 0.3s ease-in-out;
+    /* Scale up the image */
+
+}
+
+.projectCard:hover .projectContent {
+    margin-top: 0em;
+    transition: 0.3s ease-in-out;
+}
