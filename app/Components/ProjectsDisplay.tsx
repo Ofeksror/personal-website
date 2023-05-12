@@ -42,9 +42,10 @@ const ProjectsDisplay = () => {
 
 const ProjectCard = ({ project }: {project: ProjectType}) => {
     return (
-        <div className={ styles.projectCard } onClick={ () => { window.open(project.link, '_blank') } }>
+        <div className={ styles.projectCard }>
             {/* project.image*/ }
             <div className={styles.projectImage}>
+                <button onClick={ () => { window.open(project.link, '_blank') } }>Visit</button>
                 <Image src='/demoPic.jpg' width={981} height={1313} alt={ project.title } />
             </div>
 
