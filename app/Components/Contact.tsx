@@ -9,7 +9,7 @@ const Contact = () => {
             <button>Download my Resume/CV</button>
         </div>
         
-        <form action="/submit-form" method="POST">
+        <form className={styles.formContainer} action="/submit-form" method="POST">
             <label htmlFor="name">Name</label>
             <input type='text' id='name' name='name' required />
             
