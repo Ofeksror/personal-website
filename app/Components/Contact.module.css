@@ -5,15 +5,14 @@
     padding: 3em 1em;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: var(--beige);
 }
 
 .formContainer {
-    min-width: 25%;
-    padding: 0 2em;
+    flex: 1 0 3fr;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -29,4 +28,12 @@
     border-radius: 1em;
     background-color: var(--greenish);
     color: var(--brown);
+}
+
+.sideContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 1fr;
 }

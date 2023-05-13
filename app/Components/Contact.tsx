@@ -4,7 +4,7 @@ import styles from './Contact.module.css'
 const Contact = () => {
   return (
     <div className={styles.contactContainer}>
-        <div>
+        <div className={styles.sideContainer}>
             <h1>Contact Me</h1>
             <button>Download my Resume/CV</button>
         </div>
