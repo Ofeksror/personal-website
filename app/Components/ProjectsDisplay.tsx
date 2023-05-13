@@ -29,7 +29,7 @@ const Projects: ProjectType[] = [
 
 const ProjectsDisplay = () => {
   return (
-    <div className={styles.projectContainer}>
+    <div className={styles.projectsContainer}>
         <h1>Projects</h1>
         <div className={styles.projectsGallery}>
             {
@@ -54,9 +54,9 @@ const ProjectCard = ({ project }: {project: ProjectType}) => {
                 <p>{ project.description }</p>
                 
                 <div className={styles.cardTags}>
-                    { project.tags.map((tag) => {
+                    { project.tags.map((tag, index) => {
                         return (
-                            <span>{ tag }</span>
+                            <span key={index}>{ tag }</span>
                         )
                     }) }
                 </div>

@@ -15,9 +15,11 @@ export default function Home() {
         <div>
             <Header />
             <Navbar />
-            <Skills />
-            <ProjectsDisplay />
-            <Contact />
+            <div className={styles.content}>
+                <Skills />
+                <ProjectsDisplay />
+                <Contact />
+            </div>
         </div>
     )
 }
