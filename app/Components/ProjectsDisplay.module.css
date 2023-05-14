@@ -1,26 +1,58 @@
 .projectsContainer {
+    width: 100%;
+    overflow: hidden;
 }
 
 .projectsGallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-gap: 3em;
 }
 
 .projectCard {
+    border: 1px solid #e0e0e0;
+    max-height: 25em;
+}
+
+.projectContent {
+    /* margin-top: 0.3em; */
+    padding: 1em 1.5em 2em 1.5em;
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+.projectContent p {
+    color: #000;
+    line-height: 1.5em;
 }
 
 .projectImage {
-    overflow: hidden;
-    height: 15%;
+    margin: 0;
+    padding: 0;
+    height: 12em;
+    max-height: 12em;
+    position: relative;
 }
 
 .projectImage img {
     object-fit: cover;
-    position: relative;
+    height: 100%;
+    width: 100%;
+
+    /* Showing 100% of the width while keeping aspect ratio */
+    /* width: 100%;
+    height: 100%; */
+    
+    /* vertical-align: top; */
+
+    /* Placing the image in the center */
+    /* position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    
+
+    /* Animations */
     filter: brightness(1);
     transition: 0.3s ease-in-out;
 }
@@ -28,48 +60,33 @@
 .projectImage button {
     all: unset;
     z-index: 1;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     cursor: pointer;
     color: white;
     opacity: 0;
-    border: 1em solid transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1em solid transparent; */
     transition: 0.3s ease-in-out;
 }
 
-.projectImage:hover img {
+.projectCard:hover img {
     filter: brightness(0.75);
     transition: 0.3s ease-in-out;
 }
 
-.projectImage:hover button {
+.projectCard:hover button {
     opacity: 1;
     transition: 0.3s ease-in-out;
 }
 
-.projectImage button::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: linear-gradient(to right, black, black) no-repeat,
-                linear-gradient(to right, black, black) no-repeat,
-                linear-gradient(to bottom, black, black) no-repeat,
-                linear-gradient(to bottom, black, black) no-repeat;
-    background-size: 0% 2px, 0% 2px, 2px 0%, 2px 0%;
-    background-position: 0% 0%, 100% 0%, 0% 0%, 0% 100%;
-    transition: none;
+.projectImage button:hover {
+    /* border: 1em solid white; */
+    transition: 0.3s ease-in-out;
 }
 
-.porjectImage button:hover::before {
-    background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
-    transition: background-size 1s ease-in-out;
-}
-
-.projectContent {
-    margin-top: 0.3em;
-}
 
 .cardTags {
     display: flex;

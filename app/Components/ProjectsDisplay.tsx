@@ -13,16 +13,18 @@ interface ProjectType {
 const Projects: ProjectType[] = [
     {
         title: "AI English Coach",
-        description: "Improve your English skills through interactive AI-powered conversations",
-        image: "",
+        // description: "Improve your English skills through interactive AI-powered conversations",
+        // "designed to strengthen your verbal skills, grammar, pronunciation, and boost your confidence."
+        description: "Enhance your English proficiency through interactive AI-powered conversations",
+        image: "/englishCoachDemo.png",
         link: "https://ai-english.ofeksror.com",
         tags: ["React", "TypeScript", "Next.js"],
     },
     {
         title: "Bug Tracker",
-        description: "Improve your English skills through interactive AI-powered conversations",
-        image: "",
-        link: "",
+        description: "Project management tool for teams to track bugs and issues in their projects",
+        image: "/BugTrackerDemo.png",
+        link: "https://ofeksror.pythonanywhere.com",
         tags: ["Python", "Flask", "SQLite"],
     },
 ]
@@ -46,7 +48,7 @@ const ProjectCard = ({ project }: {project: ProjectType}) => {
             {/* project.image*/ }
             <div className={styles.projectImage}>
                 <button onClick={ () => { window.open(project.link, '_blank') } }>Visit</button>
-                <Image src='/demoPic.jpg' width={981} height={1313} alt={ project.title } />
+                <Image src={ project.image } width={981} height={1313} alt={ project.title } />
             </div>
 
             <div className={ styles.projectContent }>

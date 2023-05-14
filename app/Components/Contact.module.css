@@ -1,18 +1,21 @@
 .contactContainer {
+    box-sizing: border-box;
     width: 100%;
     margin: 5em 0;
-    border-radius: 2em;
-    padding: 3em 1em;
+    border-radius: 0em;
+    padding: 4em;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
     background-color: var(--beige);
+    gap: 5em;
 }
 
 .formContainer {
-    flex: 1 0 3fr;
+    max-width: 30em;
+    flex: 2;
+    /* width: 60%; */
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -31,9 +34,25 @@
 }
 
 .sideContainer {
+    flex: 1;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    max-width: 20em;
+}
+
+.sideContainer button {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex: 0 1 1fr;
+    padding: 1em 2em;
+    border-radius: 1em;
+    background-color: var(--greenish);
+    color: var(--brown);
 }
+
+/* Form */

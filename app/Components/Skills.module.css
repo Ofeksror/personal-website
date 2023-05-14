@@ -1,9 +1,25 @@
-import React from 'react'
-
-const Skills = () => {
-  return (
-    <div>Skills</div>
-  )
+.container {
+    width: 100%;
 }
 
-export default Skills;
+.skillsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 5em;
+}
+
+.icon {
+    /* Rounded borders with whiteish background */
+    border-radius: 1em;
+    background-color: var(--whiteish);
+    padding: 2em;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}

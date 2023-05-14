@@ -1,8 +1,15 @@
 .content {
-    padding: 0 15%;
-    overflow: hidden;
     display: flex;
+    margin: 0 24%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin: 0 5%;
+        background-color: red;
+    }
 }
