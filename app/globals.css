@@ -1,20 +1,39 @@
 :root {
-  --green: #CCD5AE;
-  --greenish: #E9EDC9;
-  --whiteish: #FEFAE0;
-  --beige: #FAEDCD;
-  --brown: #D4A373;
+  --background: #f6f8f8;
+  --complementary: #f1f2f3;
+  --text: #181919;
+  --lighttext: #383a3a;
+
+  --primary: #91BEF6; /* 94bbe9 */
+  --secondary: #6B92DB;
+  --accent: #3f5efb;
+
+  --white: #f4f7f8;
 }
 
 .light {
-
+  --background: #f6f8f8;
+  --complementary: #f1f2f3;
+  --text: #181919;
 }
 
 .dark {
-  
+  --background: #181919;
+  --complementary: #1c1d1d;
+  --text: #f6f8f8;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: 150ms ease-in-out;
 }

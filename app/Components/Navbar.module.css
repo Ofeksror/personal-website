@@ -3,9 +3,41 @@
     height: 4em;
     position: sticky;
     top: 0;
-    background-color: var(--greenish);
+    background-color: var(--complementary);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8em;
+    padding: 0 24%;
+    
+    transition: 150ms ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 5%;
+    }
+}
+
+.navbar a {
+    all: unset;
+    cursor: pointer;
+    color: var(--text);
+    transition: 250ms ease-in-out;
+}
+
+.navbar a:hover {
+    color: var(--secondary);
+}
+
+.themeSwitcher {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--text);
+    background-color: var(--background);
+    padding: 0.5em;
+    transition: 200ms;
 }

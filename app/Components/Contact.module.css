@@ -1,46 +1,107 @@
+.anchor {
+    display: block;
+    height: 30vh; /*same height as header*/
+    margin-top: -30vh; /*same height as header*/
+    visibility: hidden;
+}
+
 .contactContainer {
     box-sizing: border-box;
     width: 100%;
     margin: 5em 0;
-    border-radius: 0em;
+    border-radius: 1em;
     padding: 4em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    background-color: var(--beige);
-    gap: 5em;
+    /* align-items: center; */
+    background-color: var(--complementary);
+    gap: 4em;
 }
 
+.contactContainer:hover .sideContainer h1 {
+    /* background: -webkit-linear-gradient(0deg, var(--text), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: var(--primary);
+    transition: 150ms ease-in-out;
+}
+
+.sideContainer h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.contactContainer:hover .sideContainer h1::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
 .formContainer {
-    max-width: 30em;
-    flex: 2;
+    /* max-width: 30em; */
     /* width: 60%; */
     display: flex;
     flex-direction: column;
     gap: 1em;
+
+    min-width: 16em;
+    width: 100%;
+    max-width: 22em;
 }
 
-.formContainer button {
-    all: unset;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
+/* Side */
+
+.sideContainer h1 {
+    white-space: nowrap;
+    font-size: 2.25em;
+    position: relative;
+    /* color: linear-gradient(0deg, var(--text) 0%, var(--secondary) 100%); */
+    transition: 150ms ease-in-out;
+}
+
+
+.sideContainer p {
+    color: var(--lighttext);
+    font-size: 0.9em;
+    margin-top: 0.25em;
+}
+
+.contactIcons {
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1em;
     align-items: center;
-    padding: 1em 2em;
-    border-radius: 1em;
-    background-color: var(--greenish);
-    color: var(--brown);
 }
 
-.sideContainer {
-    flex: 1;
+.icon {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    gap: 1em;
-    max-width: 20em;
+    font-size: 1.1em;
+    padding: 0.35em;
+    border-radius: 0.4em;
+    background-color: var(--background);
+    border: 2px solid var(--background);
+    transition: 150ms ease-in-out;
+}
+
+.icon:hover {
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: 150ms ease-in-out;
 }
 
 .sideContainer button {
@@ -49,10 +110,127 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 1em 2em;
-    border-radius: 1em;
-    background-color: var(--greenish);
-    color: var(--brown);
+    gap: 0.4em;
+    padding: 0.8em 1.5em;
+    border-radius: 0.6em;
+    background-color: var(--primary);
+    color: var(--background);
+    font-size: 0.9em;
+    box-sizing: content-box;
+
+    margin-top: 2em;
+
+    transition: 150ms ease-in-out;
 }
 
+.sideContainer button:hover {
+    background-color: var(--secondary);
+    color: var(--background);
+    transition: 150ms ease-in-out;
+}
+
+
 /* Form */
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+}
+
+.inputContainer i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--background);
+
+    padding: 0.5em;
+    padding-right: 0.25em;
+    /* min-width: fit-content; */
+    font-size: 1em;
+    text-align: center;
+
+    color: var(--primary);
+
+    border-radius: 0.8em 0 0 0.8em;
+    border: 1px solid var(--primary);
+    border-right: none;
+}
+
+.inputContainer input {
+    width: 100%;
+    padding: 0.5em;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    background-color: var(--background);
+    color: var(--text);
+
+    border: 1px solid var(--primary);
+    border-left: none;
+    border-radius: 0 0.8em 0.8em 0;
+}
+
+.inputContainer input:focus {
+}
+
+.formContainer textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8em 1em;
+    outline: none;
+    border: none;
+    resize: none;
+
+    color: var(--lighttext);
+    background: var(--background);
+    border: 1px solid var(--primary);
+    border-radius: 0.8em;
+
+    font-family: inherit;
+    font-size: 0.8em;
+}
+
+.formContainer button {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.8em 1em;
+    border-radius: 0.6em;
+    background: var(--primary);
+    color: var(--background);
+    font-size: 0.9em;
+    transition: 150ms ease-in-out;
+}
+
+.formContainer button:hover {
+    background: var(--secondary);
+    color: var(--background);
+    transition: 150ms ease-in-out;
+}
+
+/* ===== Media Queries ===== */
+
+@media (max-width: 1200px) {
+    .contactContainer {
+        flex-direction: column;
+        padding: 3em 4em;
+    }
+
+    .formContainer {
+        width: 100%;
+    }
+
+    .sideContainer {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactIcons {
+        justify-content: center;
+    }
+}

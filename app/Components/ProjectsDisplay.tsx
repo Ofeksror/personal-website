@@ -31,14 +31,17 @@ const Projects: ProjectType[] = [
 
 const ProjectsDisplay = () => {
   return (
+    <>
+        <span className={styles.anchor} id="projectsSection"></span>
     <div className={styles.projectsContainer}>
-        <h1>Projects</h1>
+        <h1 className={styles.projectsTitle}>Projects</h1>
         <div className={styles.projectsGallery}>
             {
                 Projects.map((project, index) => (<ProjectCard key={index} project={ project } />))
             }
         </div>
     </div>
+    </>
   )
 }
 

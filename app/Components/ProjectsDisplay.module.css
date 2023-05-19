@@ -1,17 +1,45 @@
+.anchor {
+    display: block;
+    height: 5vh; /*same height as header*/
+    margin-top: -5vh; /*same height as header*/
+    visibility: hidden;
+}
+
 .projectsContainer {
     width: 100%;
     overflow: hidden;
+    margin: 5em 0;
+}
+
+.projectsContainer .projectsTitle {
+    text-align: center;
+    margin-bottom: 2em;
+    transition: 250ms ease-in-out;
+}
+
+.projectsContainer:hover .projectsTitle {
+    color: var(--secondary);
+    transition: 250ms ease-in-out;
 }
 
 .projectsGallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-gap: 3em;
+    margin-bottom: 3em;
 }
 
 .projectCard {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--complementary);
+    background-color: var(--complementary);
+    display: block;
     max-height: 25em;
+    transition: 250ms ease-in-out;
+}
+
+.projectCard:hover {
+    border: 1px solid var(--primary);
+    transition: 250ms ease-in-out;
 }
 
 .projectContent {
@@ -21,14 +49,46 @@
     margin-bottom: 0;
 }
 
+.projectCard h1 {
+    color: var(--text);
+    text-align: left;
+    margin-bottom: 0.2em;
+
+    display: inline-block;
+    position: relative;
+
+    transition: 150ms ease-in-out;
+}
+
+.projectCard h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.projectCard:hover h1 {
+    color: var(--secondary);
+    transition: 150ms ease-in-out;
+}
+
+.projectCard:hover h1::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .projectContent p {
-    color: #000;
+    color: var(--text);
     line-height: 1.5em;
 }
 
 .projectImage {
-    margin: 0;
-    padding: 0;
     height: 12em;
     max-height: 12em;
     position: relative;
@@ -57,12 +117,17 @@
     transition: 0.3s ease-in-out;
 }
 
+/* Animation for button on image hover */
+
 .projectImage button {
     all: unset;
     z-index: 1;
     cursor: pointer;
     color: white;
     opacity: 0;
+
+    font-size: 1.2em;
+    /* display: inline-block; */
 
     position: absolute;
     top: 50%;
@@ -72,9 +137,29 @@
     transition: 0.3s ease-in-out;
 }
 
+.projectImage button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.projectImage:hover button::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Show link on card hover */
+
 .projectCard:hover img {
-    filter: brightness(0.75);
-    transition: 0.3s ease-in-out;
+    filter: brightness(0.65);
+    transition: 0.5s ease-in-out;
 }
 
 .projectCard:hover button {
@@ -82,10 +167,6 @@
     transition: 0.3s ease-in-out;
 }
 
-.projectImage button:hover {
-    /* border: 1em solid white; */
-    transition: 0.3s ease-in-out;
-}
 
 
 .cardTags {
@@ -101,9 +182,9 @@
     /* Pill design */
     display: inline-block;
     padding: 0.5em 1em;
-    border-radius: 3em;
-    background-color: #e0e0e0;
-    color: #000;
+    border-radius: 0.8em;
+    background-color: var(--primary);
+    color: var(--background);
     font-size: 0.8em;
 
 }

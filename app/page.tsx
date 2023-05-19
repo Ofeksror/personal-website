@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './page.module.css';
 
 import Header from './Components/Header';
@@ -9,8 +9,6 @@ import ProjectsDisplay from './Components/ProjectsDisplay';
 import Contact from './Components/Contact';
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState<boolean>(false);
-
     return (
         <div>
             <Header />
@@ -18,7 +16,7 @@ export default function Home() {
             <div className={styles.content}>
                 <Skills />
                 <ProjectsDisplay />
-                <Contact />
+                <Contact/>
             </div>
         </div>
     )

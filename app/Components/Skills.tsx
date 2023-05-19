@@ -1,28 +1,97 @@
-import React from 'react'
+'use client'
+import React, {useRef, useEffect} from 'react'
 import styles from './Skills.module.css'
 import Image from 'next/image';
 
 const Skills = () => {
+  const scrollDiv = useRef<any>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (scrollDiv.current) {
+        // Adjust this calculation as needed
+        const maxScrollLeft = scrollDiv.current.scrollWidth - scrollDiv.current.clientWidth;
+        const scrollPos = window.pageYOffset;
+        const maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+        
+        // This is a simple linear relationship between scrollTop and scrollLeft.
+        // You may want to adjust this calculation to get the behavior you want.
+        scrollDiv.current.scrollLeft = (scrollPos / (maxScrollTop / 2)) * maxScrollLeft;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    // Cleanup function
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
+
+
   return (
+    <>
+    <span className={styles.anchor} id="skillsSection"></span>
     <div className={styles.container}>
       <h1>Skills</h1>
-      <div className={styles.skillsContainer}>
-        <span className={styles.icon}><Image width={128} height={128} alt='TypeScript' src={"/Typescript.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='React' src={"/React.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='NextJS' src={"/Next.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='Python' src={"/Python.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='Flask' src={"/Flask.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='Javascript' src={"/Javascript.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='ExpressJS' src={"/Express.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='NodeJS' src={"/Node.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='MongoDB' src={"/Mongo.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='SQLite3' src={"/Sqlite.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='HTML' src={"/HTML.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='CSS' src={"/CSS.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='Git' src={"/Git.png"}/></span>
-        <span className={styles.icon}><Image width={128} height={128} alt='Github' src={"/Github.png"}/></span>
+      <div className={styles.skillsContainer} ref={scrollDiv}>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='TypeScript' src={"/Typescript.png"}/>
+          <p>TypeScript</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='React' src={"/React.png"}/>
+          <p>React</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='NextJS' src={"/Next.png"}/>
+          <p>Next JS</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Python' src={"/Python.png"}/>
+          <p>Python</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Flask' src={"/Flask.png"}/>
+          <p>Flask</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Javascript' src={"/Javascript.png"}/>
+          <p>Javascript</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='ExpressJS' src={"/Express.png"}/>
+          <p>Express JS</p>
+          </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='NodeJS' src={"/Node.png"}/>
+          <p>Node JS</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='MongoDB' src={"/Mongo.png"}/>
+          <p>MongoDB</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='SQLite3' src={"/Sqlite.png"}/>
+          <p>SQLite3</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='HTML' src={"/HTML.png"}/>
+          <p>HTML</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='CSS' src={"/CSS.png"}/>
+          <p>CSS</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Git' src={"/Git.png"}/>
+          <p>Git</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Github' src={"/Github.png"}/>
+          <p>GitHub</p>
+        </span>
       </div>
     </div>
+    </>
   )
 }
 
