@@ -21,6 +21,7 @@ const Navbar = () => {
 
     return (
         <nav className={ styles.navbar }>
+            <span><a href="#aboutSection" >About</a></span>
             <span><a href="#skillsSection" >Skills</a></span>
             <span><a href="#projectsSection" >Projects</a></span>
             <span><a href="#contactSection" >Contact</a></span>

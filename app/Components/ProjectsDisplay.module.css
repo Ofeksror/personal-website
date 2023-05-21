@@ -13,12 +13,12 @@
 
 .projectsContainer .projectsTitle {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1.6em;
     transition: 250ms ease-in-out;
 }
 
 .projectsContainer:hover .projectsTitle {
-    color: var(--secondary);
+    color: var(--primary);
     transition: 250ms ease-in-out;
 }
 
@@ -60,6 +60,7 @@
     transition: 150ms ease-in-out;
 }
 
+/*
 .projectCard h1::after {
     content: '';
     position: absolute;
@@ -72,19 +73,23 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
+*/
 
-.projectCard:hover h1 {
-    color: var(--secondary);
-    transition: 150ms ease-in-out;
-}
-
+/* 
 .projectCard:hover h1::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
+*/
+
+.projectCard:hover h1 {
+    color: var(--primary);
+    transition: 150ms ease-in-out;
+}
+
 .projectContent p {
-    color: var(--text);
+    color: var(--lighttext);
     line-height: 1.5em;
 }
 
@@ -174,17 +179,17 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 1.5em;
     gap: 1em;
 }
 
 .cardTags span {
     /* Pill design */
     display: inline-block;
-    padding: 0.5em 1em;
+    padding: 0.4em 0.9em;
     border-radius: 0.8em;
     background-color: var(--primary);
     color: var(--background);
     font-size: 0.8em;
-
+    font-family: var(--secondaryFont);
 }

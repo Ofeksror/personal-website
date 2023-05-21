@@ -1,0 +1,41 @@
+.anchor {
+    display: block;
+    height: 40vh;
+    margin-top: -40vh;
+    visibility: hidden;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: warp;
+}
+
+.aboutContent {
+    flex: 1;
+}
+
+.aboutContent h1 {
+    
+}
+
+.aboutContent p {
+
+}
+
+.aboutImage {
+    flex: 1;
+}
+
+.imageContainer {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.imageContainer img {
+    object-fit: cover;
+}

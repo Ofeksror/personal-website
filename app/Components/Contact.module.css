@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* align-items: center; */
+    align-items: center;
     background-color: var(--complementary);
     gap: 4em;
 }
@@ -66,6 +66,8 @@
     font-size: 2.25em;
     position: relative;
     /* color: linear-gradient(0deg, var(--text) 0%, var(--secondary) 100%); */
+    width: fit-content;
+    margin: 0 auto;
     transition: 150ms ease-in-out;
 }
 
@@ -93,14 +95,16 @@
     font-size: 1.1em;
     padding: 0.35em;
     border-radius: 0.4em;
+    cursor: pointer;
     background-color: var(--background);
     border: 2px solid var(--background);
     transition: 150ms ease-in-out;
 }
 
 .icon:hover {
+    /* border: 2px solid var(--primary); */
+    filter: drop-shadow(-0.09em 0.09em 0 var(--primary));
     border: 2px solid var(--primary);
-    cursor: pointer;
     transition: 150ms ease-in-out;
 }
 
@@ -163,22 +167,21 @@
     padding: 0.5em;
     outline: none;
     border: none;
-    font-family: inherit;
+
     background-color: var(--background);
     color: var(--text);
+    font-family: var(--secondaryFont);
+
 
     border: 1px solid var(--primary);
     border-left: none;
     border-radius: 0 0.8em 0.8em 0;
 }
 
-.inputContainer input:focus {
-}
-
 .formContainer textarea {
     width: 100%;
     box-sizing: border-box;
-    padding: 0.8em 1em;
+    padding: 0.6em 1em;
     outline: none;
     border: none;
     resize: none;
@@ -188,8 +191,9 @@
     border: 1px solid var(--primary);
     border-radius: 0.8em;
 
-    font-family: inherit;
-    font-size: 0.8em;
+    font-family: var(--secondaryFont);
+
+    font-size: 0.9em;
 }
 
 .formContainer button {

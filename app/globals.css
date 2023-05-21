@@ -1,26 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
 :root {
+  --white: #f4f7f8;
   --background: #f6f8f8;
   --complementary: #f1f2f3;
   --text: #181919;
   --lighttext: #383a3a;
 
-  --primary: #91BEF6; /* 94bbe9 */
-  --secondary: #6B92DB;
-  --accent: #3f5efb;
+  --primary: #8ebffa; 
+  --secondary: #598bc4;
 
-  --white: #f4f7f8;
+  --secondaryFont: 'Nunito', sans-serif;
 }
 
 .light {
   --background: #f6f8f8;
   --complementary: #f1f2f3;
   --text: #181919;
+  --lighttext: #343535;
 }
 
+  /* --primary: #91BEF6; 94bbe9 */
+  /* --secondary: #6B92DB; */
+  /* --accent: #3f5efb; */
+
+
 .dark {
-  --background: #181919;
-  --complementary: #1c1d1d;
+  --background: #151616;
+  --complementary: #181919;
   --text: #f6f8f8;
+  --lighttext: #dbdddd;
 }
 
 * {
