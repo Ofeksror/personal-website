@@ -6,8 +6,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
-        <h3>Hello,</h3>
-        <h1>Im <span className={styles.nameSpan}>Ofek</span></h1>
+        <h1>Im <span className={styles.nameSpan}>Ofek Sror</span></h1>
         <h2>I do <span>software</span></h2> {/* onClick go to projects section */}
       </div>
     </div>

@@ -23,7 +23,7 @@ const Projects: ProjectType[] = [
     {
         title: "Bug Tracker",
         description: "Project management tool for teams to track bugs and issues in their projects",
-        image: "/BugTrackerDemo.png",
+        image: "/bugTrackerDemo.png",
         link: "https://ofeksror.pythonanywhere.com",
         tags: ["Python", "Flask", "SQLite"],
     },

@@ -8,7 +8,7 @@
 .projectsContainer {
     width: 100%;
     overflow: hidden;
-    margin: 5em 0;
+    margin-top: 7rem;
 }
 
 .projectsContainer .projectsTitle {
@@ -90,7 +90,7 @@
 
 .projectContent p {
     color: var(--lighttext);
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 .projectImage {

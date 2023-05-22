@@ -6,36 +6,84 @@
 }
 
 .aboutContainer {
+    margin-top: 6em;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: warp;
+    gap: 4em;
+    /* padding: 0 2em; */
+    flex-wrap: wrap;
+    min-height: 12em;
+    height: fit-content;
 }
 
 .aboutContent {
-    flex: 1;
+    min-width: 12em;
+    width: max-content;
+    max-width: 30em;
 }
 
 .aboutContent h1 {
-    
+    position: relative;
+    width: fit-content;
+    transition: 150ms ease-in-out;
+}
+
+.aboutContent h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.aboutContainer:hover .aboutContent h1::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.aboutContainer:hover .aboutContent h1 {
+    color: var(--primary);
+    transition: 150ms ease-in-out;
 }
 
 .aboutContent p {
-
+    margin-top: 0.3em;
+    line-height: 1.4em;
+    color: var(--lighttext);
 }
 
 .aboutImage {
-    flex: 1;
+    /* Make this as large as the container in height, and it should be responsive*/
+    /* height: 100%; */
+    /* width: fit-content; */
+    height: 100%;
+    max-height: 18em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.4em solid var(--primary);
+    box-sizing: border-box;
+    padding: 0.8em;
 }
+
 
 .imageContainer {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: red;
+    overflow: hidden;
 }
 
-.imageContainer img {
+.personalImage {
+    height: 100%;
+    width: auto;
     object-fit: cover;
 }

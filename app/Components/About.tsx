@@ -9,14 +9,15 @@ const About = () => {
             <div className={styles.aboutContent}>
                 <h1>About Me</h1>
                 <p>
-                    I am a 17 years old self-taught software developer.
-                    I started my journey learning programming from Harvard's CS50.
-                    I like building cool things and learning new technologies.
+                    I'm Ofek, a 17 years-old self-taught software engineer from Netayna, Israel.<br></br>
+                    I am passionate about using code to build innovative ideas.<br></br>
+                    I love expanding my horizons with new technologies and learning new things.<br></br>
                 </p>
             </div>
             <div className={styles.aboutImage}>
                 <div className={styles.imageContainer}>
-                    <Image src={"/Ofek.png"} width={981} height={1313} alt="Ofek Sror" />
+                    <img src='/Ofek.jpg' alt='Ofek Sror' className={styles.personalImage} />
+                    {/* <Image src={"/Ofek.jpg"} width={1170} height={1170} alt="Ofek Sror" className={styles.personalImage} /> */}
                 </div>
             </div>
         </div>

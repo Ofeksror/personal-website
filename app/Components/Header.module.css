@@ -7,14 +7,28 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* font-family: var(--secondaryFont); */
+    color: var(--white);
 }
 
 .content {
-    margin: 0 24%;
+    margin: 0 26%;
+}
+/* 
+@media (max-width: 1920px) {
+    .content {
+        margin: 0 26%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .content {
+        margin: 0 17%;
+    }
 }
 
 @media (max-width: 768px) {
     .content {
-        margin: 0 5%;
+        margin: 0 8%;
     }
-}
+} */

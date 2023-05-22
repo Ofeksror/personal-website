@@ -1,14 +1,14 @@
 .anchor {
     display: block;
-    height: 30vh; /*same height as header*/
-    margin-top: -30vh; /*same height as header*/
+    height: 5vh; /*same height as header*/
+    margin-top: -5vh; /*same height as header*/
     visibility: hidden;
 }
 
 .contactContainer {
     box-sizing: border-box;
     width: 100%;
-    margin: 5em 0;
+    margin-top: 7em;
     border-radius: 1em;
     padding: 4em;
     display: flex;
@@ -75,7 +75,8 @@
 .sideContainer p {
     color: var(--lighttext);
     font-size: 0.9em;
-    margin-top: 0.25em;
+    margin: 0.3em auto;
+    
 }
 
 .contactIcons {
@@ -114,22 +115,23 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 0.4em;
+    /* gap: 0.4em; */
     padding: 0.8em 1.5em;
     border-radius: 0.6em;
     background-color: var(--primary);
-    color: var(--background);
+    /* color: var(--background); */
+    color: var(--white);
     font-size: 0.9em;
     box-sizing: content-box;
 
-    margin-top: 2em;
+    margin-top: 1.4em;
 
     transition: 150ms ease-in-out;
 }
 
 .sideContainer button:hover {
     background-color: var(--secondary);
-    color: var(--background);
+    /* color: var(--background); */
     transition: 150ms ease-in-out;
 }
 
@@ -169,7 +171,7 @@
     border: none;
 
     background-color: var(--background);
-    color: var(--text);
+    color: var(--lighttext);
     font-family: var(--secondaryFont);
 
 
@@ -206,14 +208,16 @@
     padding: 0.8em 1em;
     border-radius: 0.6em;
     background: var(--primary);
-    color: var(--background);
+    /* color: var(--background); */
+    color: var(--white);
+    /* font-family: var(--secondaryFont); */
     font-size: 0.9em;
     transition: 150ms ease-in-out;
+
 }
 
 .formContainer button:hover {
     background: var(--secondary);
-    color: var(--background);
     transition: 150ms ease-in-out;
 }
 
