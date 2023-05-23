@@ -12,14 +12,14 @@ const Header = () => {
     if (!glitchSpan)
     return;
     
-    let interval: string | number | NodeJS.Timer | null | undefined = null;
+    let interval: any = null;
     const original = glitchSpan.current.innerText;
     let iteration = 0;
 
     interval = setInterval(() => {
       glitchSpan.current.innerText = glitchSpan.current.innerText
         .split("")
-        .map((letter, index) => {
+        .map((letter: string, index: number) => {
           if (index < iteration)
             return original[index];
 
