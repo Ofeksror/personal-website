@@ -6,14 +6,14 @@ import styles from './Header.module.css'
 const Header = () => {
   const glitchSpan = useRef<any>(null);
   
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   
   useEffect(() => {glitchSpan.current.onmouseover = () => {
     if (!glitchSpan)
     return;
     
     let interval: any = null;
-    const original = glitchSpan.current.innerText;
+    const original = "Ofek Sror";
     let iteration = 0;
 
     interval = setInterval(() => {
