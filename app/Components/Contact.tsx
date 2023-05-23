@@ -14,13 +14,13 @@ const Contact = () => {
             <h1>Get in Touch</h1>
             <p>Shoot me a message!</p>
             <div className={styles.contactIcons}>
-              <span className={styles.icon}> <MdAlternateEmail /> </span> {/* Email */}
-              <span className={styles.icon}> <FaLinkedin /> </span> {/* LinkedIn */}
-              <span className={styles.icon}> <FaGithub /> </span> {/* Github */}
-              <span className={styles.icon}> <BsInstagram /> </span> {/* Instagram */}
+              <span className={styles.icon} onClick={() => { navigator.clipboard.writeText("ofeksror@gmail.com") }}> <MdAlternateEmail /> </span> {/* Email */}
+              <span className={styles.icon} onClick={ () => { window.open("https://www.linkedin.com/in/ofek-sror/", '_blank') }}> <FaLinkedin /> </span> {/* LinkedIn */}
+              <span className={styles.icon} onClick={ () => { window.open("https://github.com/Ofeksror/", '_blank') }}> <FaGithub /> </span> {/* Github */}
+              <span className={styles.icon} onClick={ () => { window.open("https://www.instagram.com/ofeksror/", '_blank') }}> <BsInstagram /> </span> {/* Instagram */}
             </div>
             
-            <button>My Resume</button>
+            <button onClick={ () => { window.open("/Resume.jpg") }}>My Resume</button>
         </div>
         
         <form className={styles.formContainer} action="/submit-form" method="POST">

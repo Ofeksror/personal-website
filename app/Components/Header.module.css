@@ -14,6 +14,10 @@
 .content {
     margin: 0 26%;
 }
+
+.content h2 {
+    font-weight: 500;
+}
 /* 
 @media (max-width: 1920px) {
     .content {
