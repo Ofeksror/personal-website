@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import styles from './Contact.module.css'
 
 import { BsInstagram, BsSend, BsPerson, BsTelephone } from 'react-icons/bs'
@@ -6,15 +7,45 @@ import { MdAlternateEmail } from 'react-icons/md'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Contact = () => {
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  
+  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    console.log(name, email, phone, message);
+
+    setName('');
+    setEmail('');
+    setPhone('');
+    setMessage('');
+  }
+
+  const [showTooltip, setShowTooltip] = useState<boolean>(false);
+  const handleCopyEmail = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    setShowTooltip(true);
+
+    setTimeout(() => {
+      setShowTooltip(false);
+    }, 2500);
+    
+    navigator.clipboard.writeText("ofeksror@gmail.com")
+  }
+
   return (
     <>
     <span className={styles.anchor} id="contactSection"></span>
     <div className={styles.contactContainer}>
+
         <div className={styles.sideContainer}>
             <h1>Get in Touch</h1>
             <p>Shoot me a message!</p>
             <div className={styles.contactIcons}>
-              <span className={styles.icon} onClick={() => { navigator.clipboard.writeText("ofeksror@gmail.com") }}> <MdAlternateEmail /> </span> {/* Email */}
+              <div className={styles.emailButton}>
+                <span className={styles.icon} onClick={(e) => handleCopyEmail(e)}> <MdAlternateEmail /> </span> {/* Email */}
+                {showTooltip && <span className={styles.tooltip}>Email copied to clipboard!</span>}
+              </div>
               <span className={styles.icon} onClick={ () => { window.open("https://www.linkedin.com/in/ofek-sror/", '_blank') }}> <FaLinkedin /> </span> {/* LinkedIn */}
               <span className={styles.icon} onClick={ () => { window.open("https://github.com/Ofeksror/", '_blank') }}> <FaGithub /> </span> {/* Github */}
               <span className={styles.icon} onClick={ () => { window.open("https://www.instagram.com/ofeksror/", '_blank') }}> <BsInstagram /> </span> {/* Instagram */}
@@ -26,22 +57,47 @@ const Contact = () => {
         <form className={styles.formContainer} action="/submit-form" method="POST">
             <span className={styles.inputContainer}>
               <i><BsPerson /></i>
-              <input type='text' id='name' name='name' required placeholder='Name' />
+              <input required
+                type='text'
+                id='name' name='name' placeholder='Name'
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
             </span>
 
             <span className={styles.inputContainer}>
               <i><MdAlternateEmail /></i>
-              <input type='email' id='email' name='email' required placeholder='Email' />
+              <input required
+                type='email'
+                id='email' name='email' placeholder='Email'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
             </span>
 
             <span className={styles.inputContainer}>
               <i><BsTelephone /></i>
-              <input type='tel' id='phone' name='phone' placeholder='Phone number' />
+              <input
+                type='tel'
+                id='phone' name='phone' placeholder='Phone number'
+                value={phone}
+                onChange={e => setPhone(e.target.value)}
+              />
             </span>
             
-            <textarea id='message' name='message' rows={5} required placeholder='Your message'></textarea>
+            <textarea required
+              id='message' name='message' placeholder='Your message'
+              rows={5}
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+            ></textarea>
 
-            <button type='submit'>Send <BsSend /></button>
+            <button
+              type='submit'
+              onClick={handleSubmit}
+            >
+              Send <BsSend />
+            </button>
         </form>
     </div>
     </>

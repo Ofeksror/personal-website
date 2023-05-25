@@ -109,6 +109,36 @@
     transition: 150ms ease-in-out;
 }
 
+.emailButton {
+    position: relative;
+}
+
+.tooltip {
+    z-index: 1;
+    font-size: 0.75em;
+    white-space: nowrap;
+    position: absolute;
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    margin-top: 0.7em;
+    padding: 0.3em 0.75em;
+    border-radius: 0.5em;
+    box-shadow: -0.2em 0.2em 0.4em rgba(0, 0, 0, 0.3);
+}
+
+.tooltip::after {
+    z-index: -1;
+    content:'';
+    position:absolute;
+    width:12px;
+    height:12px;
+    left: 10%;
+    bottom: 90%;
+    transform:translate(-50%,50%) rotate(45deg);
+    background-color: var(--primary);
+}
+
 .sideContainer button {
     all: unset;
     cursor: pointer;
