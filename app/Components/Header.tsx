@@ -49,8 +49,8 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
-        <h1>Im <span className={styles.glitchSpan} ref={glitchSpan}>OFEK SROR</span></h1>
-        <h2>I do <span>software</span></h2>
+        <h1>Hi, I'm <span className={styles.glitchSpan} ref={glitchSpan}>OFEK SROR</span></h1>
+        <h2>I develop web applications and back-end services</h2>
       </div>
     </div>
   )

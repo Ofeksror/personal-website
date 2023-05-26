@@ -34,12 +34,40 @@ const Skills = () => {
       <h1>Skills</h1>
       <div className={styles.skillsContainer} ref={scrollDiv}>
         <span className={styles.icon}>
-          <Image width={128} height={128} alt='TypeScript' src={"/Typescript.png"}/>
-          <p>TypeScript</p>
+          <Image width={128} height={128} alt='HTML' src={"/HTML.png"}/>
+          <p>HTML</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='CSS' src={"/CSS.png"}/>
+          <p>CSS</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Javascript' src={"/Javascript.png"}/>
+          <p>Javascript</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Git' src={"/Git.png"}/>
+          <p>Git</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='Github' src={"/Github.png"}/>
+          <p>GitHub</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='SQLite3' src={"/Sqlite.png"}/>
+          <p>SQLite3</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='MongoDB' src={"/Mongo.png"}/>
+          <p>MongoDB</p>
         </span>
         <span className={styles.icon}>
           <Image width={128} height={128} alt='React' src={"/React.png"}/>
           <p>React</p>
+        </span>
+        <span className={styles.icon}>
+          <Image width={128} height={128} alt='TypeScript' src={"/Typescript.png"}/>
+          <p>TypeScript</p>
         </span>
         <span className={styles.icon}>
           <Image width={128} height={128} alt='NextJS' src={"/Next.png"}/>
@@ -54,40 +82,12 @@ const Skills = () => {
           <p>Flask</p>
         </span>
         <span className={styles.icon}>
-          <Image width={128} height={128} alt='Javascript' src={"/Javascript.png"}/>
-          <p>Javascript</p>
-        </span>
-        <span className={styles.icon}>
           <Image width={128} height={128} alt='ExpressJS' src={"/Express.png"}/>
           <p>Express JS</p>
-          </span>
+        </span>
         <span className={styles.icon}>
           <Image width={128} height={128} alt='NodeJS' src={"/Node.png"}/>
           <p>Node JS</p>
-        </span>
-        <span className={styles.icon}>
-          <Image width={128} height={128} alt='MongoDB' src={"/Mongo.png"}/>
-          <p>MongoDB</p>
-        </span>
-        <span className={styles.icon}>
-          <Image width={128} height={128} alt='SQLite3' src={"/Sqlite.png"}/>
-          <p>SQLite3</p>
-        </span>
-        <span className={styles.icon}>
-          <Image width={128} height={128} alt='HTML' src={"/HTML.png"}/>
-          <p>HTML</p>
-        </span>
-        <span className={styles.icon}>
-          <Image width={128} height={128} alt='CSS' src={"/CSS.png"}/>
-          <p>CSS</p>
-        </span>
-        <span className={styles.icon}>
-          <Image width={128} height={128} alt='Git' src={"/Git.png"}/>
-          <p>Git</p>
-        </span>
-        <span className={styles.icon}>
-          <Image width={128} height={128} alt='Github' src={"/Github.png"}/>
-          <p>GitHub</p>
         </span>
       </div>
     </div>

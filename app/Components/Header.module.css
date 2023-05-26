@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* font-family: var(--secondaryFont); */
+    font-family: var(--secondaryFont);
     color: var(--white);
 }
 

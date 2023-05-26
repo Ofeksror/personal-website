@@ -17,6 +17,10 @@
     flex-wrap: wrap;
     min-height: 12em;
     height: fit-content;
+    background: linear-gradient(0deg, var(--background) 0%, var(--complementary) 100%);
+    box-sizing: border-box;
+    padding: 2em;
+    border-radius: 1em;
 }
 
 .aboutContent {

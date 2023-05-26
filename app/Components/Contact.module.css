@@ -15,7 +15,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--complementary);
+    /* background-color: var(--complementary); */
+    background: linear-gradient(0deg, var(--background) 0%, var(--complementary) 100%);
+    /* box-shadow: 0 0em 1em var(--complementary); */
     gap: 4em;
 }
 
@@ -125,6 +127,7 @@
     padding: 0.3em 0.75em;
     border-radius: 0.5em;
     box-shadow: -0.2em 0.2em 0.4em rgba(0, 0, 0, 0.3);
+    font-family: var(--secondaryFont);
 }
 
 .tooltip::after {
