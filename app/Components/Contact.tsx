@@ -13,7 +13,7 @@ const Contact = () => {
   const [message, setMessage] = useState<string>('');
   
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+    // e.preventDefault();
     console.log(name, email, phone, message);
 
     setName('');
