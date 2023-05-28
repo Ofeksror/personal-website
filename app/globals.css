@@ -47,5 +47,50 @@ html {
 body {
   background-color: var(--background);
   color: var(--text);
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--background);
   transition: 150ms ease-in-out;
+}
+
+/*
+.skillsContainer {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--background);
+    transform: rotateX(180deg);
+    transition: 150ms ease-in-out;
+}
+
+.skillsContainer span {
+    transform: rotateX(180deg);
+}
+
+.skillsContainer::-webkit-scrollbar {
+  width: 12px;
+}
+
+.skillsContainer::-webkit-scrollbar-track {
+background: var(--background);
+}
+
+.skillsContainer::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 12px;
+  border: 2px solid var(--background);
+}
+*/
+
+::-webkit-scrollbar {
+  width: 12px; /* Modifies the width of the scrollbar */
+  /* background: var(--background); */
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 12px;
+  /* border: 2px solid var(--background); */
+}
+
+::-webkit-scrollbar-track {
+
 }
