@@ -19,7 +19,7 @@
     height: fit-content;
     background: linear-gradient(0deg, var(--background) 0%, var(--complementary) 100%);
     box-sizing: border-box;
-    padding: 2em;
+    padding: 4em 2em;
     border-radius: 1em;
 }
 
@@ -71,6 +71,7 @@
     border-radius: 50%;
     overflow: hidden;
     border: 0.4em solid var(--primary);
+    background: transparent;
     box-sizing: border-box;
     padding: 0.8em;
 }

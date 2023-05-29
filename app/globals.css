@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
 :root {
   --white: #f6f8f8;
@@ -9,7 +9,7 @@
   --primary: #61ade0;
   --secondary: #4b9dd3;
 
-  --secondaryFont: 'Poppins', sans-serif;
+  --secondaryFont: 'Open Sans', sans-serif;
 }
 
 .light {
@@ -82,12 +82,12 @@ background: var(--background);
 ::-webkit-scrollbar {
   width: 12px; /* Modifies the width of the scrollbar */
   /* background: var(--background); */
-  background: transparent;
+  background: #00000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-  border-radius: 12px;
+  background-color: var(--complementary);
+  /* border-radius: 12px; */
   /* border: 2px solid var(--background); */
 }
 

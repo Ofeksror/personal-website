@@ -4,7 +4,7 @@ import { BsLightbulb } from 'react-icons/bs';
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
-    const [darkTheme, setDarkTheme] = useState(false);
+    const [darkTheme, setDarkTheme] = useState(true);
     
     const handleThemeSwitch = () => {
         setDarkTheme(!darkTheme);

@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './Header.module.css'
-
+import Image from 'next/image';
 
 const Header = () => {
   const glitchSpan = useRef<any>(null);
@@ -53,6 +53,7 @@ const Header = () => {
         <h1>Hi, I'm <span className={styles.glitchSpan} ref={glitchSpan}>Ofek Sror</span></h1>
         <h2>I develop web applications and back-end services</h2>
       </div>
+      <Image width={1313} height={981} alt='' src={"/bugTrackerDemo.png"}/>
     </div>
   )
 }
