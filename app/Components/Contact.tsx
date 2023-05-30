@@ -81,7 +81,7 @@ const Contact = () => {
               <span className={styles.icon} onClick={ () => { window.open("https://www.instagram.com/ofeksror/", '_blank') }}> <BsInstagram /> </span> {/* Instagram */}
             </div>
             
-            <button onClick={ () => { window.open("/Resume.jpg") }}>My Resume</button>
+            <button onClick={ () => { window.open("/Resume.pdf") }}>My Resume</button>
         </div>
         
         <form className={styles.formContainer} ref={form} onSubmit={sendEmail}>
