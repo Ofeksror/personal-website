@@ -1,21 +1,32 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './Contact.module.css'
+
+import emailjs from '@emailjs/browser';
 
 import { BsInstagram, BsSend, BsPerson, BsTelephone } from 'react-icons/bs'
 import { MdAlternateEmail } from 'react-icons/md'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Contact = () => {
+  const form = useRef<any>(null);
+
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   
-  const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
-    // e.preventDefault();
+  const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     console.log(name, email, phone, message);
 
+    emailjs.sendForm(process.env.SERVICE_ID as string, process.env.TEMPLATE_ID as string, form.current, process.env.PUBLIC_KEY)
+    .then((result: any) => {
+          console.log(result.text);
+      }, (error: any) => {
+          console.log(error.text);
+      });
+    
     setName('');
     setEmail('');
     setPhone('');
@@ -54,7 +65,7 @@ const Contact = () => {
             <button onClick={ () => { window.open("/Resume.jpg") }}>My Resume</button>
         </div>
         
-        <form className={styles.formContainer} action="/submit-form" method="POST">
+        <form className={styles.formContainer} ref={form} onSubmit={sendEmail}>
             <span className={styles.inputContainer}>
               <i><BsPerson /></i>
               <input required
@@ -94,7 +105,6 @@ const Contact = () => {
 
             <button
               type='submit'
-              onClick={handleSubmit}
             >
               Send <BsSend />
             </button>

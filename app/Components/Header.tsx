@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.content}>
-        <h1>Hi, I'm <span className={styles.glitchSpan} ref={glitchSpan}>Ofek Sror</span></h1>
+        <h1>Hi, I{"\'"}m <span className={styles.glitchSpan} ref={glitchSpan}>Ofek Sror</span></h1>
         <h2>I develop web applications and back-end services</h2>
       </div>
       <Image width={1313} height={981} alt='' src={"/bugTrackerDemo.png"}/>
