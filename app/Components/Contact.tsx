@@ -39,6 +39,17 @@ const Contact = () => {
     setMessage('');
   }
 
+  const [tooltipText, setTooltipText] = useState<string>("Click to copy email");
+  const handleCopyEmail = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    setTooltipText("Copied!");
+    navigator.clipboard.writeText("ofeksror@gmail.com")
+
+    setTimeout(() => {
+      setTooltipText("Click to copy email");
+    }, 2500);
+  }
+
+  /*
   const [showTooltip, setShowTooltip] = useState<boolean>(false);
   const handleCopyEmail = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
     setShowTooltip(true);
@@ -49,6 +60,7 @@ const Contact = () => {
     
     navigator.clipboard.writeText("ofeksror@gmail.com")
   }
+  */
 
   return (
     <>
@@ -61,7 +73,8 @@ const Contact = () => {
             <div className={styles.contactIcons}>
               <div className={styles.emailButton}>
                 <span className={styles.icon} onClick={(e) => handleCopyEmail(e)}> <MdAlternateEmail /> </span> {/* Email */}
-                {showTooltip && <span className={styles.tooltip}>Email copied to clipboard!</span>}
+                <span className={styles.tooltip}>{tooltipText}</span>
+                {/* {showTooltip && <span className={styles.tooltip}>Email copied to clipboard!</span>} */}
               </div>
               <span className={styles.icon} onClick={ () => { window.open("https://www.linkedin.com/in/ofek-sror/", '_blank') }}> <FaLinkedin /> </span> {/* LinkedIn */}
               <span className={styles.icon} onClick={ () => { window.open("https://github.com/Ofeksror/", '_blank') }}> <FaGithub /> </span> {/* Github */}

@@ -4,6 +4,10 @@ import { Roboto_Slab } from 'next/font/google'
 export const metadata = {
   title: 'Ofek Sror',
   description: 'Ofek Sror\'s personal website',
+  icons: {
+    // icon: '/favicon.ico',
+    icon: './favicon.png'
+  },
 }
 
 const robotoSlab = Roboto_Slab({ subsets: ['latin'] });

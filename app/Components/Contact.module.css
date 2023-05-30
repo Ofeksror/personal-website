@@ -115,9 +115,13 @@
     position: relative;
 }
 
+.emailButton:hover .tooltip {
+    visibility: visible;
+}
+
 .tooltip {
     z-index: 1;
-    font-size: 0.75em;
+    font-size: 0.8em;
     white-space: nowrap;
     position: absolute;
     display: inline-block;
@@ -128,6 +132,8 @@
     border-radius: 0.5em;
     box-shadow: -0.2em 0.2em 0.4em rgba(0, 0, 0, 0.3);
     font-family: var(--secondaryFont);
+    visibility: hidden;
+    transition: 250ms;
 }
 
 .tooltip::after {
@@ -136,7 +142,7 @@
     position:absolute;
     width:12px;
     height:12px;
-    left: 10%;
+    left: 13%;
     bottom: 90%;
     transform:translate(-50%,50%) rotate(45deg);
     background-color: var(--primary);
