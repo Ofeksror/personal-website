@@ -2,12 +2,12 @@
 
 :root {
   --white: #f6f8f8;
-  --background: #f6f8f8;
-  --complementary: #eef1f1;
-  --text: #181919;
-  --lighttext: #343535;
-  --primary: #61ade0;
-  --secondary: #4b9dd3;
+  --background: #151616;
+  --complementary: #1b1d1d;
+  --text: #f6f8f8;
+  --lighttext: #dbdddd;
+  --primary: #65b5eb;
+  --secondary: #4898ce;
 
   --secondaryFont: 'Open Sans', sans-serif;
 }

@@ -16,14 +16,20 @@ const Contact = () => {
   const [phone, setPhone] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   
+  const [isSent, setIsSent] = useState<boolean>(false);
+
   const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(name, email, phone, message);
 
-    emailjs.sendForm(process.env.SERVICE_ID as string, process.env.TEMPLATE_ID as string, form.current, process.env.PUBLIC_KEY)
+    // emailjs.sendForm(process.env.SERVICE_ID as string, process.env.TEMPLATE_ID as string, form.current, "jYx7rUksTL8A-CvlG")
+    emailjs.sendForm("service_qp1423l" as string, "template_qfxv03f" as string, form.current, "jYx7rUksTL8A-CvlG")
     .then((result: any) => {
-          console.log(result.text);
-      }, (error: any) => {
+      setIsSent(true);
+      setTimeout(() => {
+        setIsSent(false);
+      }
+      , 2000);
+    }, (error: any) => {
           console.log(error.text);
       });
     
@@ -103,11 +109,23 @@ const Contact = () => {
               onChange={e => setMessage(e.target.value)}
             ></textarea>
 
-            <button
-              type='submit'
-            >
-              Send <BsSend />
-            </button>
+            {
+              isSent ? (
+                <button
+                disabled
+                className={styles.sentButton}
+                >
+                  Email Sent!
+                </button>
+              ) : (
+                <button
+                type='submit'
+                className={styles.sendButton}
+                >
+                  Send <BsSend />
+                </button>
+              )
+            }
         </form>
     </div>
     </>

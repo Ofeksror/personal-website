@@ -47,18 +47,7 @@
 }
 
 .glitchSpan:hover {
-    text-shadow: 0 0 5px var(--primary);
     transition: 150ms ease-in-out;
-}
-
-@keyframes glitch {
-    from {
-
-    }
-
-    to {
-
-    }
 }
 
 .content h2 {
@@ -69,12 +58,13 @@
     object-fit: cover;
     /* height: 100%; */
     width: 100%;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    filter: brightness(20%);
+    filter: brightness(75%);
 }
 
 /* 

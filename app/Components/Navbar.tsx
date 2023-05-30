@@ -4,18 +4,18 @@ import { BsLightbulb } from 'react-icons/bs';
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
-    const [darkTheme, setDarkTheme] = useState(true);
+    const [darkTheme, setDarkTheme] = useState(false);
     
     const handleThemeSwitch = () => {
-        setDarkTheme(!darkTheme);
-        if (darkTheme) {
-          document.body.classList.remove('light');
-          document.body.classList.add('dark');
-        }
-        else {
-          document.body.classList.remove('dark');
-          document.body.classList.add('light');
-        }
+      setDarkTheme(!darkTheme);
+      if (darkTheme) {
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+      }
+      else {
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+      }
     }
 
 

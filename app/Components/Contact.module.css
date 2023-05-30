@@ -231,7 +231,7 @@
     font-size: 0.9em;
 }
 
-.formContainer button {
+.sendButton {
     all: unset;
     cursor: pointer;
     display: inline-flex;
@@ -249,8 +249,27 @@
 
 }
 
-.formContainer button:hover {
+.sendButton:hover {
     background: var(--secondary);
+    transition: 150ms ease-in-out;
+}
+
+.sentButton {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.8em 1em;
+    border-radius: 0.6em;
+    background: var(--background);
+    /* color: var(--background); */
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    box-sizing: border-box;
+    /* font-family: var(--secondaryFont); */
+    font-size: 0.9em;
     transition: 150ms ease-in-out;
 }
 
