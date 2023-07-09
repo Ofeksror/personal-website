@@ -20,7 +20,8 @@ const Projects: ProjectType[] = [
         image: "/tabManager.png",
         link: "https://github.com/Ofeksror/TabManager",
         buttonText: "Upcoming",
-        tags: ["React", "TypeScript", "Next.js"],
+        /* tags: ["Next.js", "React", "TypeScript", "TailwindCSS"], */
+        tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "MongoDB", "NextAuth"].
     },
     {
         title: "AI English Coach",
