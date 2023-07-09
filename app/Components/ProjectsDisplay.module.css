@@ -24,8 +24,8 @@
 
 .projectsGallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    grid-gap: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+    grid-gap: 4em;
     margin-bottom: 3em;
 }
 
@@ -33,7 +33,7 @@
     border: 1px solid var(--complementary);
     background-color: var(--complementary);
     display: block;
-    max-height: 25em;
+    max-height: 30em;
     transition: 250ms ease-in-out;
 }
 
@@ -50,6 +50,7 @@
 }
 
 .projectCard h1 {
+    font-size: 1.6em;
     color: var(--text);
     text-align: left;
     margin-bottom: 0.2em;
@@ -107,7 +108,7 @@
     /* Showing 100% of the width while keeping aspect ratio */
     /* width: 100%;
     height: 100%; */
-    
+
     /* vertical-align: top; */
 
     /* Placing the image in the center */
@@ -115,7 +116,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
-    
 
     /* Animations */
     filter: brightness(1);
@@ -143,13 +143,14 @@
 }
 
 .projectImage button::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
     height: 3px;
     bottom: 0;
     left: 0;
+    z-index: -1;
     background-color: var(--primary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
@@ -172,8 +173,6 @@
     transition: 0.3s ease-in-out;
 }
 
-
-
 .cardTags {
     display: flex;
     flex-wrap: nowrap;
@@ -192,4 +191,50 @@
     color: var(--background);
     font-size: 0.8em;
     font-family: var(--secondaryFont);
+}
+
+.modal {
+    box-shadow: 0em 0em 1em #80808025;
+    background-color: var(--background);
+    border: 0;
+    border-radius: 1em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    padding: 2em;
+}
+
+.modal div {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.modal iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+.modalCloseButton {
+    all: unset;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--background);
+    background-color: var(--text);
+    font-size: 1.1em;
+    padding: 0.4em;
+    transition: 200ms ease-in-out;
 }
