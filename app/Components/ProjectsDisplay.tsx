@@ -20,8 +20,14 @@ const Projects: ProjectType[] = [
         image: "/tabManager.png",
         link: "https://github.com/Ofeksror/TabManager",
         buttonText: "Upcoming",
-        /* tags: ["Next.js", "React", "TypeScript", "TailwindCSS"], */
-        tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "MongoDB", "NextAuth"].
+        tags: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "MongoDB",
+            "TailwindCSS",
+            // "NextAuth",
+        ],
     },
     {
         title: "AI English Coach",
@@ -106,7 +112,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
 };
 
 const PortfolioProjectCard = () => {
-    const dialogElement = useRef(null);
+    const dialogElement = useRef<HTMLDialogElement>(null);
 
     const openDialog = () => dialogElement.current?.showModal();
     const closeDialog = () => dialogElement.current?.close();

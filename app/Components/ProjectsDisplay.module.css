@@ -175,7 +175,7 @@
 
 .cardTags {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     margin-top: 1.5em;
@@ -185,7 +185,7 @@
 .cardTags span {
     /* Pill design */
     display: inline-block;
-    padding: 0.4em 0.9em;
+    padding: 0.4em 0.8em;
     border-radius: 0.8em;
     background-color: var(--primary);
     color: var(--background);

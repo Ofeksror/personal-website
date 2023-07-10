@@ -8,10 +8,16 @@ const About = () => {
         <div className={styles.aboutContainer}>
             <div className={styles.aboutContent}>
                 <h1>About Me</h1>
-                <p>
+                {/* <p>
                     I{"\'"}m Ofek, a 17 years-old self-taught software engineer from Netanya, Israel.
                     Completing Harvard{"\'"}s CS50 course ignited my love and passion for programming. <br></br>
                     Since then, I{"\'"}ve been on a self-guided journey, expanding my horizons with new technologies by diving into courses, guides, books, and building cool things.<br></br>
+                </p> */}
+                <p>
+                    I{"\'"}m Ofek, a 17 years-old self-taught software engineer from Netanya, Israel.
+                    Completing Harvard{"\'"}s CS50 course ignited my love and passion for programming. <br></br>
+                    Since then, I{"\'"}ve been learning more technologies through several courses, guides, and books. <br></br>
+                    I love building software that provides practical solutions to real problems I face.<br></br>
                 </p>
             </div>
             <div className={styles.aboutImage}>
