@@ -16,17 +16,16 @@ const Projects: ProjectType[] = [
     {
         title: "Tab & Bookmark Manager",
         description:
-            "Easier workflow with grouped workspaces and tab management",
+            "Effortlessly switch between the projects you work on with a better workflow for tab and resources management",
         image: "/tabManager.png",
         link: "https://github.com/Ofeksror/TabManager",
-        buttonText: "Upcoming",
+        buttonText: "New!",
         tags: [
             "Next.js",
             "React",
             "TypeScript",
             "MongoDB",
             "TailwindCSS",
-            // "NextAuth",
         ],
     },
     {
