@@ -1,0 +1,9 @@
+.glitchSpan {
+    color: #60cdff;
+    animation: glitch 1s linear infinite;
+    transition: 2s ease-in-out;
+}
+
+.glitchSpan:hover {
+    transition: 150ms ease-in-out;
+}

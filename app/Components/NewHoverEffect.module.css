@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    align-items: center;
+    height:fit-content;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover {
+}
+
+.word1 {
+    position: relative;
+    text-align: justify;
+}
+
+.word2 {
+    position: absolute;
+    text-align: justify;
+}
+
+.letter1 {
+    line-height: 90%;
+    display: inline-block;
+    transform-origin: top;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .letter1 {
+    transform: scaleY(0);
+}
+
+.letter2 {
+    line-height: 90%;
+    display: inline-block;
+    transform-origin: bottom;
+    transition-duration: 300ms;
+    transform: scaleY(0);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .letter2 {
+    transform: scaleY(1);
+}
