@@ -16,10 +16,10 @@ const Projects: ProjectType[] = [
     {
         title: "Tab & Bookmark Manager",
         description:
-            "Effortlessly switch between the projects you work on with a better workflow for tab and resources management",
+            "Effortlessly switch between the projects you work on with a better workflow for tab and bookmarks management",
         image: "/tabManager.png",
-        link: "https://github.com/Ofeksror/TabManager",
-        buttonText: "New!",
+        link: "https://youtu.be/Rp7TStr8Lwk?si=wfn8RUpI4QGavlui",
+        buttonText: "Watch the Demo",
         tags: [
             "Next.js",
             "React",
@@ -51,7 +51,7 @@ const Projects: ProjectType[] = [
     {
         title: "Turing Machine Interpreter",
         description:
-            "Short program that simulates turing machine instructions (Homework checker for school)",
+            "Short program that simulates Turing machine instructions (Homework checker for school)",
         image: "/turingInterpreter.jpg",
         link: "https://github.com/Ofeksror/turingCompilerMachine",
         buttonText: "Source Code",
