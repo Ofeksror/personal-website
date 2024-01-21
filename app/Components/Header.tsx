@@ -9,7 +9,7 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.content}>
         <h1>Hi, I{"\'"}m <NewHoverEffect /></h1>
-        <h2>I develop web applications and back-end services</h2>
+        <h2>I build software</h2>
       </div>
       <Image width={16384} height={12288} alt='' src={"/background.png"}/>
     </div>
